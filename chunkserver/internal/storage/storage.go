@@ -8,11 +8,11 @@ import (
 )
 
 type Storage struct{
-	Basepath string
+	BasePath string
 }
 
 func New(basePath string) *Storage{
-	os.MkdirAll(basePath, os.ModePerm, os.ModePerm)
+	_ = os.MkdirAll(basePath, os.ModePerm)
 	return &Storage{BasePath: basePath}
 }
 
